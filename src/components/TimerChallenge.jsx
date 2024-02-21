@@ -13,14 +13,14 @@ export default function TimerChallenge({ title, targetTime }) {
     timer.current = setTimeout(() => {
       setTimerExpired(true);
       setTimerStarted(false);
-      dialog.current.showModal();
+      dialog.current.open();
     }, targetTime * 1000);
   }
 
   function handleStop() {
     console.log("Handle stop");
     clearTimeout(timer.current);
-    dialog.current.showModal();
+    dialog.current.open();
   }
 
   return (
